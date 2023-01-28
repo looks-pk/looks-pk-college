@@ -491,8 +491,21 @@ margin-top: 15px;
 .random-products:first-child{
   border-bottom: 1px solid var(--colo-ededed);
 }
+
 .filter-sort-grid{
   padding: 10px;
   border-radius: 10px;
   background-color: white;
+}
+
+.filter-grid-svg img{
+  border: solid 1px var(--color-777777);
+  padding: 2px;
+  height: 20px;
+  width: 22px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.filter-grid-svg img:hover{
+  background-color: var(--colo-ededed);
 }

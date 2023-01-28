@@ -3,6 +3,7 @@ import Breadcrubms from '../components/Breadcrubms'
 import { Helmet } from 'react-helmet'
 import Meta from '../components/Meta'
 import ReactStars from "react-rating-stars-component";
+import { Link } from 'react-router-dom'
 
 const OurStore = (props) => {
     return (
@@ -153,11 +154,11 @@ const OurStore = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-9">
+                        <div className="col-md-9">
                             <div className='filter-sort-grid'>
-                                <div className='d-flex justify-content-between align-items-center'>
+                                <div className='d-flex justify-content-between  align-items-center'>
                                     <div className='d-flex align-items-center gap-10'>
-                                        <p className='mb-0'>Sort By :</p>
+                                        <p className='mb-0 '>Sort.By:</p>
                                         <select className='form-control form-select' name="" id="">
                                             <option value="manual">Featured</option>
                                             <option selected="selected" value="best-selling">Best Selling</option>
@@ -170,13 +171,165 @@ const OurStore = (props) => {
                                         </select>
                                     </div>
                                     <div className="d-flex align-items-center gap-10">
-                                        <p className="total-products">23 Products</p>
-                                        <div className="d-flex align-items-center gap-10">
-                                            <img src="images/gr4.svg" alt="" className='d-block img-fluid' />
+                                        <p className="total-products mt-3">23 Products</p>
+                                        <div className="d-flex  filter-grid-svg align-items-center gap-10">
+                                            <img src="images/gr4.svg" alt="" className=' d-block img-fluid' />
                                             <img src="images/gr3.svg" alt="" className='d-block img-fluid' />
                                             <img src="images/gr2.svg" alt="" className='d-block img-fluid' />
                                             <img src="images/gr.svg" alt="" className='d-block img-fluid' />
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="products-of-filter d-flex flex-wrap py-2">
+                                <div className='col-md-3 my-2 p-1'>
+                                    <div className="product-card position-relative">
+                                        <div className="wishlist-icon position-absolute">
+                                            <Link><img src="images/wish.svg" alt="" /></Link>
+                                        </div>
+                                        <div className="product-image">
+                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
+                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
+                                        </div>
+                                        <div className="product-details">
+                                            <h6 className="brand">Rollex</h6>
+                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
+                                            <ReactStars
+                                                count={5}
+                                                size={24}
+                                                value="3"
+                                                edit={false}
+                                                activeColor="#ffd700"
+                                            />
+                                            <p className='price'>$15</p>
+                                        </div>
+                                        <dir className="action-bar position-absolute">
+                                            <div className='d-flex flex-column gap-15'>
+                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
+                                                <Link> <img src="images/view.svg" alt="" /></Link>
+                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
+                                            </div>
+                                        </dir>
+                                    </div>
+                                </div>
+                                <div className='col-md-3 my-2 p-1'>
+                                    <div className="product-card position-relative">
+                                        <div className="wishlist-icon position-absolute">
+                                            <Link><img src="images/wish.svg" alt="" /></Link>
+                                        </div>
+                                        <div className="product-image">
+                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
+                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
+                                        </div>
+                                        <div className="product-details">
+                                            <h6 className="brand">Rollex</h6>
+                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
+                                            <ReactStars
+                                                count={5}
+                                                size={24}
+                                                value="3"
+                                                edit={false}
+                                                activeColor="#ffd700"
+                                            />
+                                            <p className='price'>$15</p>
+                                        </div>
+                                        <dir className="action-bar position-absolute">
+                                            <div className='d-flex flex-column gap-15'>
+                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
+                                                <Link> <img src="images/view.svg" alt="" /></Link>
+                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
+                                            </div>
+                                        </dir>
+                                    </div>
+                                </div>
+                                <div className='col-md-3 my-2 p-1'>
+                                    <div className="product-card position-relative">
+                                        <div className="wishlist-icon position-absolute">
+                                            <Link><img src="images/wish.svg" alt="" /></Link>
+                                        </div>
+                                        <div className="product-image">
+                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
+                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
+                                        </div>
+                                        <div className="product-details">
+                                            <h6 className="brand">Rollex</h6>
+                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
+                                            <ReactStars
+                                                count={5}
+                                                size={24}
+                                                value="3"
+                                                edit={false}
+                                                activeColor="#ffd700"
+                                            />
+                                            <p className='price'>$15</p>
+                                        </div>
+                                        <dir className="action-bar position-absolute">
+                                            <div className='d-flex flex-column gap-15'>
+                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
+                                                <Link> <img src="images/view.svg" alt="" /></Link>
+                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
+                                            </div>
+                                        </dir>
+                                    </div>
+                                </div>
+                                <div className='col-md-3 my-2 p-1'>
+                                    <div className="product-card position-relative">
+                                        <div className="wishlist-icon position-absolute">
+                                            <Link><img src="images/wish.svg" alt="" /></Link>
+                                        </div>
+                                        <div className="product-image">
+                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
+                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
+                                        </div>
+                                        <div className="product-details">
+                                            <h6 className="brand">Rollex</h6>
+                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '...' }</h5>
+                                            <ReactStars
+                                                count={5}
+                                                size={24}
+                                                value="3"
+                                                edit={false}
+                                                activeColor="#ffd700"
+                                            />
+                                            <p className='price'>$15</p>
+                                        </div>
+                                        <dir className="action-bar position-absolute">
+                                            <div className='d-flex flex-column gap-15'>
+                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
+                                                <Link> <img src="images/view.svg" alt="" /></Link>
+                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
+                                            </div>
+                                        </dir>
+                                    </div>
+                                </div>
+                                <div className='col-md-3 my-2 p-1'>
+                                    <div className="product-card position-relative">
+                                        <div className="wishlist-icon position-absolute">
+                                            <Link><img src="images/wish.svg" alt="" /></Link>
+                                        </div>
+                                        <div className="product-image">
+                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
+                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
+                                        </div>
+                                        <div className="product-details">
+                                            <h6 className="brand">Rollex</h6>
+                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
+                                            <ReactStars
+                                                count={5}
+                                                size={24}
+                                                value="3"
+                                                edit={false}
+                                                activeColor="#ffd700"
+                                            />
+                                            <p className='price'>$15</p>
+                                        </div>
+                                        <dir className="action-bar position-absolute">
+                                            <div className='d-flex flex-column gap-15'>
+                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
+                                                <Link> <img src="images/view.svg" alt="" /></Link>
+                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
+                                            </div>
+                                        </dir>
                                     </div>
                                 </div>
                             </div>
