@@ -1,15 +1,18 @@
 import React from 'react'
 import ReactStars from "react-rating-stars-component";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 
 
 
-const ProductCard = () => {
+
+const ProductCard = (props) => {
+  const{grid} = props;
+  let location = useLocation();
   return (
     <>
-    <div className='col-md-3 my-2'>
+    <div className={`${location.pathname === "/Store"}`?`p-1 col-md-${grid}`:"col-md-3"}>
       <div className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <Link><img src="images/wish.svg" alt="" /></Link>
@@ -40,7 +43,7 @@ const ProductCard = () => {
       </div>
       
     </div>
-    <div className='col-md-3 my-2'>
+    <div className={`${location.pathname === "/Store"}`?`p-1 col-md-${grid}`:"col-md-3"}>
       <div className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <Link><img src="images/wish.svg" alt="" /></Link>
@@ -70,7 +73,7 @@ const ProductCard = () => {
         </dir>
       </div>
     </div>
-    <div className='col-md-3 my-2'>
+    <div className={`${location.pathname === "/Store"}`?`p-1 col-md-${grid}`:"col-md-3"}>
       <div className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <Link><img src="images/wish.svg" alt="" /></Link>
@@ -101,7 +104,7 @@ const ProductCard = () => {
       </div>
       
     </div>
-    <div className='col-md-3 my-2'>
+    <div className={`${location.pathname === "/Store"}`?`p-1 col-md-${grid}`:"col-md-3"}>
       <div className="product-card position-relative">
         <div className="wishlist-icon position-absolute">
           <Link><img src="images/wish.svg" alt="" /></Link>
@@ -136,4 +139,4 @@ const ProductCard = () => {
   )
 }
 
-export default ProductCard
+export default ProductCard;

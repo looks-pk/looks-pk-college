@@ -3,9 +3,13 @@ import Breadcrubms from '../components/Breadcrubms'
 import { Helmet } from 'react-helmet'
 import Meta from '../components/Meta'
 import ReactStars from "react-rating-stars-component";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import ProductCard from '../components/ProductCard'
 
 const OurStore = (props) => {
+    const [grid, setGrid] = useState(4)
+    // alert(grid)
     return (
         <>
             <Helmet>
@@ -173,166 +177,17 @@ const OurStore = (props) => {
                                     <div className="d-flex align-items-center gap-10">
                                         <p className="total-products mt-3">23 Products</p>
                                         <div className="d-flex  filter-grid-svg align-items-center gap-10">
-                                            <img src="images/gr4.svg" alt="" className=' d-block img-fluid' />
-                                            <img src="images/gr3.svg" alt="" className='d-block img-fluid' />
-                                            <img src="images/gr2.svg" alt="" className='d-block img-fluid' />
-                                            <img src="images/gr.svg" alt="" className='d-block img-fluid' />
+                                            <img onClick={() => { setGrid(3); }} src="images/gr4.svg" alt="" className=' d-block img-fluid' />
+                                            <img onClick={() => { setGrid(4); }} src="images/gr3.svg" alt="" className='d-block img-fluid' />
+                                            <img onClick={() => { setGrid(6); }} src="images/gr2.svg" alt="" className='d-block img-fluid' />
+                                            <img onClick={() => { setGrid(12); }} src="images/gr.svg" alt="" className='d-block img-fluid' />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="products-of-filter d-flex flex-wrap py-2">
-                                <div className='col-md-3 my-2 p-1'>
-                                    <div className="product-card position-relative">
-                                        <div className="wishlist-icon position-absolute">
-                                            <Link><img src="images/wish.svg" alt="" /></Link>
-                                        </div>
-                                        <div className="product-image">
-                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
-                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
-                                        </div>
-                                        <div className="product-details">
-                                            <h6 className="brand">Rollex</h6>
-                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
-                                            <ReactStars
-                                                count={5}
-                                                size={24}
-                                                value="3"
-                                                edit={false}
-                                                activeColor="#ffd700"
-                                            />
-                                            <p className='price'>$15</p>
-                                        </div>
-                                        <dir className="action-bar position-absolute">
-                                            <div className='d-flex flex-column gap-15'>
-                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
-                                                <Link> <img src="images/view.svg" alt="" /></Link>
-                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
-                                            </div>
-                                        </dir>
-                                    </div>
+                                <div className="pt-3 d-flex flex-wrap">
+                                    <ProductCard grid={grid} />
                                 </div>
-                                <div className='col-md-3 my-2 p-1'>
-                                    <div className="product-card position-relative">
-                                        <div className="wishlist-icon position-absolute">
-                                            <Link><img src="images/wish.svg" alt="" /></Link>
-                                        </div>
-                                        <div className="product-image">
-                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
-                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
-                                        </div>
-                                        <div className="product-details">
-                                            <h6 className="brand">Rollex</h6>
-                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
-                                            <ReactStars
-                                                count={5}
-                                                size={24}
-                                                value="3"
-                                                edit={false}
-                                                activeColor="#ffd700"
-                                            />
-                                            <p className='price'>$15</p>
-                                        </div>
-                                        <dir className="action-bar position-absolute">
-                                            <div className='d-flex flex-column gap-15'>
-                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
-                                                <Link> <img src="images/view.svg" alt="" /></Link>
-                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
-                                            </div>
-                                        </dir>
-                                    </div>
-                                </div>
-                                <div className='col-md-3 my-2 p-1'>
-                                    <div className="product-card position-relative">
-                                        <div className="wishlist-icon position-absolute">
-                                            <Link><img src="images/wish.svg" alt="" /></Link>
-                                        </div>
-                                        <div className="product-image">
-                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
-                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
-                                        </div>
-                                        <div className="product-details">
-                                            <h6 className="brand">Rollex</h6>
-                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
-                                            <ReactStars
-                                                count={5}
-                                                size={24}
-                                                value="3"
-                                                edit={false}
-                                                activeColor="#ffd700"
-                                            />
-                                            <p className='price'>$15</p>
-                                        </div>
-                                        <dir className="action-bar position-absolute">
-                                            <div className='d-flex flex-column gap-15'>
-                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
-                                                <Link> <img src="images/view.svg" alt="" /></Link>
-                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
-                                            </div>
-                                        </dir>
-                                    </div>
-                                </div>
-                                <div className='col-md-3 my-2 p-1'>
-                                    <div className="product-card position-relative">
-                                        <div className="wishlist-icon position-absolute">
-                                            <Link><img src="images/wish.svg" alt="" /></Link>
-                                        </div>
-                                        <div className="product-image">
-                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
-                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
-                                        </div>
-                                        <div className="product-details">
-                                            <h6 className="brand">Rollex</h6>
-                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '...' }</h5>
-                                            <ReactStars
-                                                count={5}
-                                                size={24}
-                                                value="3"
-                                                edit={false}
-                                                activeColor="#ffd700"
-                                            />
-                                            <p className='price'>$15</p>
-                                        </div>
-                                        <dir className="action-bar position-absolute">
-                                            <div className='d-flex flex-column gap-15'>
-                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
-                                                <Link> <img src="images/view.svg" alt="" /></Link>
-                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
-                                            </div>
-                                        </dir>
-                                    </div>
-                                </div>
-                                <div className='col-md-3 my-2 p-1'>
-                                    <div className="product-card position-relative">
-                                        <div className="wishlist-icon position-absolute">
-                                            <Link><img src="images/wish.svg" alt="" /></Link>
-                                        </div>
-                                        <div className="product-image">
-                                            <img className='img-fluid' src="images/watch.jpg" alt="" />
-                                            <img className='img-fluid' src="images/watch-1.png" alt="" />
-                                        </div>
-                                        <div className="product-details">
-                                            <h6 className="brand">Rollex</h6>
-                                            <h5 className='product-title'>{('very beautifull watch with silver straps'.slice(0,20)) + '....' }</h5>
-                                            <ReactStars
-                                                count={5}
-                                                size={24}
-                                                value="3"
-                                                edit={false}
-                                                activeColor="#ffd700"
-                                            />
-                                            <p className='price'>$15</p>
-                                        </div>
-                                        <dir className="action-bar position-absolute">
-                                            <div className='d-flex flex-column gap-15'>
-                                                <Link> <img src="images/prodcompare.svg" alt="" /></Link>
-                                                <Link> <img src="images/view.svg" alt="" /></Link>
-                                                <Link> <img src="images/add-cart.svg" alt="" /></Link>
-                                            </div>
-                                        </dir>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
