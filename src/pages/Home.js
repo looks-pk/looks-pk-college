@@ -6,6 +6,9 @@ import ProductCard from '../components/ProductCard'
 import SpeacialProducts from '../components/SpeacialProducts'
 
 const Home = () => {
+  
+  let grid = 3;
+
   return (
     <>
       <section className='home-wrapper-1 py-5'>
@@ -219,7 +222,7 @@ const Home = () => {
             <div className="col-12">
               <h3 className='section-heading'>Featured Collections</h3>
             </div>
-            <ProductCard />
+            <ProductCard grid={grid}/>
           </div>
         </div>
       </section>
@@ -289,7 +292,7 @@ const Home = () => {
             <div className="col-12">
               <h3 className='section-heading'>Our Popular Products</h3>
             </div>
-            <ProductCard />
+            <ProductCard grid={grid} />
           </div>
         </div>
       </section>
@@ -299,10 +302,20 @@ const Home = () => {
             <div className="col-12">
               <h3 className='.section-heading'>Our Latest Blogs</h3>
             </div>
-            <BlogCards />
-            <BlogCards />
-            <BlogCards />
-            <BlogCards />
+          </div>
+          <div className="row">
+            <div className="col-3">
+              <BlogCards/>
+            </div>
+            <div className="col-3">
+              <BlogCards/>
+            </div>
+            <div className="col-3">
+              <BlogCards/>
+            </div>
+            <div className="col-3">
+              <BlogCards/>
+            </div>
           </div>
         </div>
       </section>

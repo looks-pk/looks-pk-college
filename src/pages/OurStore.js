@@ -8,7 +8,7 @@ import { useState } from 'react';
 import ProductCard from '../components/ProductCard'
 
 const OurStore = (props) => {
-    const [grid, setGrid] = useState(4)
+    const [grid, setGrid] = useState(3)
     // alert(grid)
     return (
         <>

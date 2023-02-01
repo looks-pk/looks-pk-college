@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Nav2 from './components/Nav2';
 import OurStore from './pages/OurStore';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Route path='About' element={<About/>}/>
       <Route path='Contact' element={<Contact/>}/>
       <Route path='Store' element={<OurStore/>}/>
-      <Route path='Nav2' element={<Nav2/>}/>
+      <Route path='blogs' element={<Blog/>}/>
     </Route>
    </Routes>
    </BrowserRouter>
