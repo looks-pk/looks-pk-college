@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
-import { BsLinkedin, BsGithub, BsYoutube, BsInstagram,BsChatLeftText,BsShop } from 'react-icons/bs'
-import {FaSalesforce, FaFirstOrder} from 'react-icons/fa'
+import { BsChatLeftText,BsShop } from 'react-icons/bs'
+import {FaSalesforce,} from 'react-icons/fa'
 
 const Header = () => {
   const [menu, setMenu] = useState(false)
@@ -48,10 +48,10 @@ const Header = () => {
             </div>
             <div className="col-5">
               <div className="header-upper-links d-flex align-items-center justify-content-between">
-                <div><Link className='third-header-link'><img className='header-2-mx' src="images/compare.svg" alt="" />Compare </Link></div>
-                <div><Link className='third-header-link'><img className='header-2-mx' src="images/wishlist.svg" alt="" />WishList</Link></div>
-                <div><Link className='third-header-link'><img className='header-2-mx' src="images/user.svg" alt="" />Account</Link></div>
-                <div><Link className='third-header-link'><img className='header-2-mx' src="images/cart.svg" alt="" />Cart</Link></div>
+                <div><Link to={"/Compare-Product"} className='third-header-link'><img className='header-2-mx' src="images/compare.svg" alt="" />Compare </Link></div>
+                <div><Link to={"Wishlist"} className='third-header-link'><img className='header-2-mx' src="images/wishlist.svg" alt="" />WishList</Link></div>
+                <div><Link to={"/Login"} className='third-header-link'><img className='header-2-mx' src="images/user.svg" alt="" />Login/Sign Up</Link></div>
+                <div><Link to={"/Cart"} className='third-header-link'><img className='header-2-mx' src="images/cart.svg" alt="" />Cart</Link></div>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ const Header = () => {
                     <NavLink className="third-header-link" to="/">Home</NavLink>
                     <NavLink className="third-header-link" to="/Store">Store</NavLink>
                     <NavLink className="third-header-link" to="/Blogs">Blog</NavLink>
-                    <NavLink className="third-header-link" to="/">Contact Us</NavLink>
+                    <NavLink className="third-header-link" to="/Contact">Contact Us</NavLink>
                   </div>
                 </div>
               </div>

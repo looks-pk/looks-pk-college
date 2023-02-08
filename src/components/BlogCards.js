@@ -14,7 +14,7 @@ const BlogCards = () => {
             </p>
             <h5 className="title"> A beautifull Sunday Morning</h5>
             <p className="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, ullam.</p>
-            <Link className='button' to={"/"}>Read More</Link>
+            <Link className='button' to={"/blog/:id"}>Read More</Link>
         </div>
       </div>
     
