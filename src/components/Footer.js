@@ -46,10 +46,10 @@ const Footer = () => {
           <div className="col-md-3 grid-mob footer-left-side-content">
             <h4 className='text-white mb-4'>Information</h4>
             <div className='footer-links d-flex flex-column'>
-              <Link className='text-white mb-1 py-2'>Watches</Link>
-              <Link className='text-white mb-1 py-2'>Laptops</Link>
-              <Link className='text-white mb-1 py-2'>Pc,s</Link>
-              <Link className='text-white mb-1 py-2'>Handfrees</Link></div>
+              <Link to={'/privacy-policy'} className='text-white mb-1 py-2'>Privacy Policy</Link>
+              <Link to={'/return-policy'} className='text-white mb-1 py-2'>Return Policy</Link>
+              <Link to={'/shipping-policy'} className='text-white mb-1 py-2'>Shipping Policy</Link>
+              <Link to={'/terms-and-conditions'} className='text-white mb-1 py-2'>Terms And Conditions</Link></div>
           </div>
           <div className="col-md-3 grid-mob">
             <h4 className='text-white mb-4'>Account</h4>

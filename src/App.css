@@ -697,3 +697,7 @@ footer .input-group-text {
   color: var(--color-777777);
   margin-bottom: 20px;
 }
+.policy{
+  background-color: white;
+  padding: 30px;
+}
