@@ -41,6 +41,7 @@ const SingleProduct = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
+                            <div className="review-inner-wrapper">
                             <div className="review-head d-flex justify-content-between align-items-end">
                                 <div>
                                     <h4 className='mb-2'>Customer Reviews</h4>
@@ -61,6 +62,7 @@ const SingleProduct = () => {
                                         Write A Review
                                     </a>
                                     </div>}
+                            </div>
                             </div>
                         </div>
                     </div>
